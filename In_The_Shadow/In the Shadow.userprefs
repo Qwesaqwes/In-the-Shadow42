@@ -1,0 +1,14 @@
+﻿<Properties StartupConfiguration="{036FFADD-BBE9-53A5-589B-9D64E54657FE}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/asset/_Scripts/ObjMovement.cs">
+    <Files>
+      <File FileName="Assets/asset/_Scripts/ObjMovement.cs" Line="19" Column="13" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.In_220the_220Shadow PreferredExecutionTarget="Unity.Editor" />
+</Properties>
