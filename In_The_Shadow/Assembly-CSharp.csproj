@@ -51,7 +51,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\_Scripts\ObjectMovement.cs" />
+     <Compile Include="Assets\_Scripts\ObjectsMovement\ElephandMovement.cs" />
+     <Compile Include="Assets\_Scripts\ObjectsMovement\GlobeEarthMovement.cs" />
+     <Compile Include="Assets\_Scripts\ObjectsMovement\TeaPotMovement.cs" />
+     <Compile Include="Assets\_Scripts\UI\LoadLevel.cs" />
  <Reference Include="UnityEngine.UIAutomation">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UIAutomation/UnityEngine.UIAutomation.dll</HintPath>
  </Reference>
