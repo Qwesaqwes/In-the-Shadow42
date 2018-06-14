@@ -5,12 +5,14 @@ using UnityEngine;
 public class ElephandMovement : MonoBehaviour
 {
 	[Range(2, 7)]public float	speedRotation = 5f;
-	public float	MinYRot;
-	public float	MaxYRot;
-	public float	MinZRot;
-	public float	MaxZRot;
-	public float	MinXRot;
-	public float	MaxXRot;
+	public float				MinYRot;
+	public float				MaxYRot;
+	public float				MinZRot;
+	public float				MaxZRot;
+	public float				MinXRot;
+	public float				MaxXRot;
+	public GameObject			blurObj;
+	private bool				_PlayerWin = false;
 	
 	void Start()
 	{
@@ -30,15 +32,19 @@ public class ElephandMovement : MonoBehaviour
 
 	void checkObjRotation()
 	{
-		if (transform.eulerAngles.y >= (MinYRot + 360) && transform.eulerAngles.y <= (MaxYRot + 360))
+		if (transform.eulerAngles.y >= (MinYRot + 360) && transform.eulerAngles.y <= (MaxYRot + 360) && _PlayerWin == false)
 		{
 			if (transform.eulerAngles.z >= MinZRot && transform.eulerAngles.z <= MaxZRot)
 				{
 					if (transform.eulerAngles.x >= MinXRot && transform.eulerAngles.x <= MaxXRot)
 						{
-							Debug.Log("YOU WIN!");
+							// Debug.Log("YOU WIN!");
+							_PlayerWin = true;
+							blurObj.SetActive(true);
 						}
 				}
 		}
+		else
+			_PlayerWin = false;
 	}
 }

@@ -54,7 +54,13 @@
      <Compile Include="Assets\_Scripts\ObjectsMovement\ElephandMovement.cs" />
      <Compile Include="Assets\_Scripts\ObjectsMovement\GlobeEarthMovement.cs" />
      <Compile Include="Assets\_Scripts\ObjectsMovement\TeaPotMovement.cs" />
-     <Compile Include="Assets\_Scripts\UI\LoadLevel.cs" />
+     <Compile Include="Assets\_Scripts\UI\LeverChanger.cs" />
+     <Compile Include="Assets\_Scripts\UI\MainMenu\LoadLevel.cs" />
+     <Compile Include="Assets\_Scripts\UI\MainMenu\MainMenuFade.cs" />
+     <Compile Include="Assets\_Scripts\UI\MenuModeSelection\Fade.cs" />
+     <Compile Include="Assets\_Scripts\UI\MenuModeSelection\ModeSelection.cs" />
+     <Compile Include="Assets\_Scripts\UI\UIManager.cs" />
+     <None Include="Assets\Shader\Blur.shader" />
  <Reference Include="UnityEngine.UIAutomation">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UIAutomation/UnityEngine.UIAutomation.dll</HintPath>
  </Reference>

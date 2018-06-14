@@ -12,6 +12,8 @@ public class GlobeEarthMovement : MonoBehaviour
 
 	bool	_earthOK = false;
 	bool	_baseOK = false;
+	public GameObject			blurObj;
+	private bool				_PlayerWin = false;
 	
 	// Use this for initialization
 	void Start ()
@@ -66,6 +68,7 @@ public class GlobeEarthMovement : MonoBehaviour
 		checkBase();
 		if (_earthOK && _baseOK)
 		{
+			// Debug.Log("Enter Here!");
 			checkDistance();
 		}
 	}
@@ -126,9 +129,15 @@ public class GlobeEarthMovement : MonoBehaviour
 		float offsetY = Mathf.Abs(Base.transform.position.y - Earth.transform.position.y);
 		float offsetZ = Mathf.Abs(Base.transform.position.z - Earth.transform.position.z);
 
-		if (offsetY <= 0.01 && offsetZ <= 0.01)
+		Debug.Log("offsetY: " + offsetY + "\noffsetZ: " + offsetZ);
+
+		if (offsetY <= 0.02 && offsetZ <= 0.02 && _PlayerWin == false)
 		{
 			Debug.Log("YOU WIN!");
+			_PlayerWin = true;
+			blurObj.SetActive(true);
 		}
+		else
+			_PlayerWin = false;
 	}
 }
