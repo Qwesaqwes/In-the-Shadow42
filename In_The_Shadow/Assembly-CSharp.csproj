@@ -63,9 +63,9 @@
      <Compile Include="Assets\Volumetric Lights\Scripts\VolumetricLight.cs" />
      <Compile Include="Assets\Volumetric Lights\Scripts\VolumetricLightRenderer.cs" />
      <None Include="Assets\western-props-pack\README.txt" />
-     <None Include="Assets\Shader\BilateralBlur.shader" />
-     <None Include="Assets\Shader\BlitAdd.shader" />
-     <None Include="Assets\Shader\VolumetricLight.shader" />
+     <None Include="Assets\Volumetric Lights\Shaders\BilateralBlur.shader" />
+     <None Include="Assets\Volumetric Lights\Shaders\BlitAdd.shader" />
+     <None Include="Assets\Volumetric Lights\Shaders\VolumetricLight.shader" />
      <None Include="Assets\Shader\Blur.shader" />
  <Reference Include="UnityEngine.UIAutomation">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UIAutomation/UnityEngine.UIAutomation.dll</HintPath>

@@ -1,6 +1,10 @@
 OSXStandalone
 SceneListBegin?
+Assets/_Scenes/ModeSelection.unity
+Assets/_Scenes/MenuLevel.unity
 Assets/_Scenes/level1.unity
+Assets/_Scenes/level2.unity
+Assets/_Scenes/Level3.unity
 SceneListEnd?
 2bfee571a29b0f2e66721ba4a36b2e42 Assembly-CSharp.dll:.TeaPotMovement
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
