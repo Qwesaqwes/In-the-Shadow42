@@ -38,6 +38,11 @@ public class ElephandMovement : MonoBehaviour
 				{
 					if (transform.eulerAngles.x >= MinXRot && transform.eulerAngles.x <= MaxXRot)
 						{
+							if (PlayerPrefs.GetInt("Mode") == 0)
+							{
+								PlayerPrefs.SetInt("Level3", 1);
+							}
+
 							// Debug.Log("YOU WIN!");
 							_PlayerWin = true;
 							blurObj.SetActive(true);

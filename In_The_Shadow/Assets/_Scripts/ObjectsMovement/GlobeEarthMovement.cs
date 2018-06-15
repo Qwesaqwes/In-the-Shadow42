@@ -131,8 +131,12 @@ public class GlobeEarthMovement : MonoBehaviour
 
 		Debug.Log("offsetY: " + offsetY + "\noffsetZ: " + offsetZ);
 
-		if (offsetY <= 0.02 && offsetZ <= 0.02 && _PlayerWin == false)
+		if (offsetY <= 0.03 && offsetZ <= 0.03 && _PlayerWin == false)
 		{
+			if (PlayerPrefs.GetInt("Mode") == 0)
+			{
+				PlayerPrefs.SetInt("LastLevelClear", 1);
+			}
 			Debug.Log("YOU WIN!");
 			_PlayerWin = true;
 			blurObj.SetActive(true);

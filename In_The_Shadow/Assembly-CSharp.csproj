@@ -60,6 +60,12 @@
      <Compile Include="Assets\_Scripts\UI\MenuModeSelection\Fade.cs" />
      <Compile Include="Assets\_Scripts\UI\MenuModeSelection\ModeSelection.cs" />
      <Compile Include="Assets\_Scripts\UI\UIManager.cs" />
+     <Compile Include="Assets\Volumetric Lights\Scripts\VolumetricLight.cs" />
+     <Compile Include="Assets\Volumetric Lights\Scripts\VolumetricLightRenderer.cs" />
+     <None Include="Assets\western-props-pack\README.txt" />
+     <None Include="Assets\Shader\BilateralBlur.shader" />
+     <None Include="Assets\Shader\BlitAdd.shader" />
+     <None Include="Assets\Shader\VolumetricLight.shader" />
      <None Include="Assets\Shader\Blur.shader" />
  <Reference Include="UnityEngine.UIAutomation">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UIAutomation/UnityEngine.UIAutomation.dll</HintPath>
@@ -145,6 +151,10 @@
  <Reference Include="UnityEngine.StandardEvents">
  <HintPath>/Users/jichen-m/Library/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.10/UnityEngine.StandardEvents.dll</HintPath>
  </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{49EDE929-73A6-5431-148A-E3D804A44585}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
