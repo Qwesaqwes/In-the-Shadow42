@@ -321,6 +321,7 @@ GameObject:
   - component: {fileID: 96390418}
   - component: {fileID: 96390417}
   - component: {fileID: 96390421}
+  - component: {fileID: 96390422}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -404,6 +405,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Resolution: 0
   DefaultSpotCookie: {fileID: 2800000, guid: 5157bf6d690b6df458f6c0ce0c06d329, type: 3}
+--- !u!114 &96390422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 96390416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  profile: {fileID: 11400000, guid: e498a586030cd4563a2b9db19feab613, type: 2}
 --- !u!1 &175925220
 GameObject:
   m_ObjectHideFlags: 0
@@ -570,7 +583,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SampleCount: 12
-  ScatteringCoef: 0.453
+  ScatteringCoef: 1
   ExtinctionCoef: 0.01
   SkyboxExtinctionCoef: 0.9
   MieG: 0.1
@@ -579,7 +592,7 @@ MonoBehaviour:
   GroundLevel: 0
   Noise: 0
   NoiseScale: 0.015
-  NoiseIntensity: 1
+  NoiseIntensity: 4.5
   NoiseIntensityOffset: 0.3
   NoiseVelocity: {x: 3, y: 3}
   MaxRayLength: 400

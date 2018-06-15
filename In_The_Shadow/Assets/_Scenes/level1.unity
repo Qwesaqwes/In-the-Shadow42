@@ -1029,14 +1029,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SampleCount: 12
-  ScatteringCoef: 0.725
+  ScatteringCoef: 0.181
   ExtinctionCoef: 0.01
   SkyboxExtinctionCoef: 0.9
-  MieG: 0.1
+  MieG: 0.022
   HeightFog: 0
   HeightScale: 0.1
   GroundLevel: 0
-  Noise: 0
+  Noise: 1
   NoiseScale: 0.15
   NoiseIntensity: 4.5
   NoiseIntensityOffset: 0.3
@@ -1138,6 +1138,7 @@ GameObject:
   - component: {fileID: 1270748261}
   - component: {fileID: 1270748260}
   - component: {fileID: 1270748264}
+  - component: {fileID: 1270748265}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1221,6 +1222,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Resolution: 1
   DefaultSpotCookie: {fileID: 2800000, guid: 5157bf6d690b6df458f6c0ce0c06d329, type: 3}
+--- !u!114 &1270748265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1270748259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  profile: {fileID: 11400000, guid: e498a586030cd4563a2b9db19feab613, type: 2}
 --- !u!4 &1305280252 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: bafd0f63d5d5f42aab642502223b246d, type: 3}
