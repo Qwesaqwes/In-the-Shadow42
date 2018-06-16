@@ -11,8 +11,11 @@ public class ElephandMovement : MonoBehaviour
 	public float				MaxZRot;
 	public float				MinXRot;
 	public float				MaxXRot;
-	public GameObject			blurObj;
-	private bool				_PlayerWin = false;
+	public Animator				_LightAnimation;
+	public Animator				_CameraAnimation;
+
+	bool				_PlayerWin = false;
+	bool winAnimationCompleted = true;
 	
 	void Start()
 	{
@@ -23,9 +26,9 @@ public class ElephandMovement : MonoBehaviour
 	{
 		float Haxis = Input.GetAxis("Mouse Y");
 		float Vaxis = Input.GetAxis("Mouse X");
-		if (Input.GetKey(KeyCode.LeftControl) && Input.GetMouseButton(0))
+		if (Input.GetKey(KeyCode.LeftControl) && Input.GetMouseButton(0) && winAnimationCompleted)
 			transform.Rotate(Haxis * speedRotation, 0, 0, Space.World);
-		else if (Input.GetMouseButton(0))
+		else if (Input.GetMouseButton(0) && winAnimationCompleted)
 			transform.Rotate(0, -1 * Vaxis * speedRotation, Haxis * speedRotation, Space.World);
 		checkObjRotation();
 	}
@@ -42,14 +45,25 @@ public class ElephandMovement : MonoBehaviour
 							{
 								PlayerPrefs.SetInt("Level3", 1);
 							}
-
 							// Debug.Log("YOU WIN!");
 							_PlayerWin = true;
-							blurObj.SetActive(true);
+							Time.timeScale = 0.4f;
+							winAnimationCompleted = false;
+							Cursor.visible = false;
+							_LightAnimation.SetTrigger("LevelClear");
+							_CameraAnimation.SetTrigger("LevelClear");
+							StartCoroutine(ReactiveMouse());
 						}
 				}
 		}
 		else
 			_PlayerWin = false;
+	}
+
+	IEnumerator	ReactiveMouse()
+	{
+		yield return new WaitForSeconds(2);
+		winAnimationCompleted = true;
+		Cursor.visible = true;
 	}
 }

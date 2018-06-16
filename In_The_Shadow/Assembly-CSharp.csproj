@@ -51,6 +51,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\_Scripts\LightWin.cs" />
      <Compile Include="Assets\_Scripts\ObjectsMovement\ElephandMovement.cs" />
      <Compile Include="Assets\_Scripts\ObjectsMovement\GlobeEarthMovement.cs" />
      <Compile Include="Assets\_Scripts\ObjectsMovement\TeaPotMovement.cs" />
@@ -122,6 +123,7 @@
      <None Include="Assets\PostProcessing\Resources\Shaders\Tonemapping.cginc" />
      <None Include="Assets\PostProcessing\Editor Resources\Monitors\HistogramCompute.compute" />
      <None Include="Assets\PostProcessing\Resources\Shaders\Uber.shader" />
+     <None Include="Assets\Shader\Bloom.shader" />
      <None Include="Assets\PostProcessing\Resources\Shaders\Blit.shader" />
      <None Include="Assets\PostProcessing\Editor Resources\Monitors\WaveformRender.shader" />
      <None Include="Assets\Volumetric Lights\Shaders\BilateralBlur.shader" />
