@@ -4,14 +4,18 @@ using UnityEngine.SceneManagement;
 public class MainMenuFade : MonoBehaviour
 {
 	public Animator animator;
-	public GameObject	LoadLevelObj;
+	// public GameObject	LoadLevelObj;
 
-	LoadLevel			_loadlevel;
+	// LoadLevel			_loadlevel;
+	public GameObject	LoadLevelsObj;
+
+	LoadLevels			_loadlevels;
 
 	// Use this for initialization
 	void Start ()
 	{
-		_loadlevel = LoadLevelObj.GetComponent<LoadLevel>();
+		// _loadlevel = LoadLevelObj.GetComponent<LoadLevel>();
+		_loadlevels = LoadLevelsObj.GetComponent<LoadLevels>();
 	}
 
 	public void MainMenuFadeOut()
@@ -21,6 +25,6 @@ public class MainMenuFade : MonoBehaviour
 
 	public void LoadScene()
 	{
-		SceneManager.LoadScene(_loadlevel.scene);
+		SceneManager.LoadScene(_loadlevels.scene);
 	}
 }

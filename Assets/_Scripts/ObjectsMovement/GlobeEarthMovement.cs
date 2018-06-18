@@ -156,7 +156,7 @@ public class GlobeEarthMovement : MonoBehaviour
 			_PlayerWin = true;
 			Time.timeScale = 0.4f;
 			winAnimationCompleted = false;
-			Cursor.visible = false;
+			// Cursor.visible = false;
 			LightAnimation.SetTrigger("LevelClear");
 			CameraAnimation.SetTrigger("LevelClear");
 			StartCoroutine(ReactiveMouse());
@@ -168,7 +168,8 @@ public class GlobeEarthMovement : MonoBehaviour
 	IEnumerator	ReactiveMouse()
 	{
 		yield return new WaitForSeconds(2);
+		Time.timeScale = 1f;
 		winAnimationCompleted = true;
-		Cursor.visible = true;
+		// Cursor.visible = true;
 	}
 }

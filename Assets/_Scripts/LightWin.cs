@@ -7,7 +7,6 @@ public class LightWin : MonoBehaviour {
 	public GameObject			blurObj;
 	public void WinEvent()
 	{
-		Time.timeScale = 1f;
 		blurObj.SetActive(true);
 	}
 }

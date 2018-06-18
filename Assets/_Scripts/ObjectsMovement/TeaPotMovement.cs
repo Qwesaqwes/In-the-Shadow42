@@ -39,7 +39,7 @@ public class TeaPotMovement : MonoBehaviour
 			_PlayerWin = true;
 			Time.timeScale = 0.4f;
 			winAnimationCompleted = false;
-			Cursor.visible = false;
+			// Cursor.visible = false;
 			_LightAnimation.SetTrigger("LevelClear");
 			_CameraAnimation.SetTrigger("LevelClear");
 			StartCoroutine(ReactiveMouse());
@@ -51,7 +51,8 @@ public class TeaPotMovement : MonoBehaviour
 	IEnumerator	ReactiveMouse()
 	{
 		yield return new WaitForSeconds(2);
+		Time.timeScale = 1f;
 		winAnimationCompleted = true;
-		Cursor.visible = true;
+		// Cursor.visible = true;
 	}
 }
