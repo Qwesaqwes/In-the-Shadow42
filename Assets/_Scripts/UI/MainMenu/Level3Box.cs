@@ -24,4 +24,14 @@ public class Level3Box : MonoBehaviour
 			_fade.MainMenuFadeOut();
 		}
 	}
+
+	void OnMouseEnter()
+	{
+		transform.localScale += new Vector3(0.1f, 0.1f, 0.1f);
+	}
+
+	void OnMouseExit()
+	{
+		transform.localScale -= new Vector3(0.1f, 0.1f, 0.1f);
+	}
 }
