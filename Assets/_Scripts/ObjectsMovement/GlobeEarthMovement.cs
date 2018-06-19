@@ -150,9 +150,9 @@ public class GlobeEarthMovement : MonoBehaviour
 		{
 			if (PlayerPrefs.GetInt("Mode") == 0)
 			{
-				PlayerPrefs.SetInt("LastLevelClear", 1);
+				PlayerPrefs.SetInt("Level4", 1);
 			}
-			Debug.Log("YOU WIN!");
+			// Debug.Log("YOU WIN!");
 			_PlayerWin = true;
 			Time.timeScale = 0.4f;
 			winAnimationCompleted = false;

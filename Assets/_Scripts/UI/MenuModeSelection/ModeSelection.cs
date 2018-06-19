@@ -13,6 +13,8 @@ public class ModeSelection : MonoBehaviour
 			PlayerPrefs.SetInt("Level2", 0);
 		if (!PlayerPrefs.HasKey("Level3"))
 			PlayerPrefs.SetInt("Level3", 0);
+		if (!PlayerPrefs.HasKey("Level4"))
+			PlayerPrefs.SetInt("Level4", 0);
 		if (!PlayerPrefs.HasKey("LastLevelClear"))
 			PlayerPrefs.SetInt("LastLevelClear", 0);
 
@@ -21,6 +23,7 @@ public class ModeSelection : MonoBehaviour
 		// PlayerPrefs.SetInt("Mode", 0);
 		// PlayerPrefs.SetInt("Level2", 0);
 		// PlayerPrefs.SetInt("Level3", 0);
+		// PlayerPrefs.SetInt("Level4", 0);
 		// PlayerPrefs.SetInt("LastLevelClear", 0);
 	}
 
