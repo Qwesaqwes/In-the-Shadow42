@@ -22,6 +22,7 @@ public class Level3Box : MonoBehaviour
 		{
 			_loadLevels.SelectedLevel(4);
 			_fade.MainMenuFadeOut();
+			FindObjectOfType<AudioManager>().Play("SelectedLevel");
 		}
 	}
 

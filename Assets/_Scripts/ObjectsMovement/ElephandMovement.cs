@@ -41,6 +41,7 @@ public class ElephandMovement : MonoBehaviour
 				{
 					if (transform.eulerAngles.x >= MinXRot && transform.eulerAngles.x <= MaxXRot)
 						{
+							FindObjectOfType<AudioManager>().Play("WinSound");
 							if (PlayerPrefs.GetInt("Mode") == 0)
 							{
 								PlayerPrefs.SetInt("Level3", 1);
@@ -56,8 +57,8 @@ public class ElephandMovement : MonoBehaviour
 						}
 				}
 		}
-		else
-			_PlayerWin = false;
+		// else
+		// 	_PlayerWin = false;
 	}
 
 	IEnumerator	ReactiveMouse()

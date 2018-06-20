@@ -15,7 +15,7 @@ public class LoadLevels : MonoBehaviour
 	public Animator		Pathligh2Animation;
 	public Animator		Pathligh3Animation;
 
-	bool							_Normal = false;
+	bool				_Normal = false;
 
 	void Start()
 	{

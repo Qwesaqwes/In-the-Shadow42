@@ -717,7 +717,7 @@ MonoBehaviour:
   NoiseScale: 0.1
   NoiseIntensity: 4.5
   NoiseIntensityOffset: 0.3
-  NoiseVelocity: {x: 1, y: 1}
+  NoiseVelocity: {x: 0.1, y: 0.2}
   MaxRayLength: 400
 --- !u!95 &853348470
 Animator:
@@ -1261,8 +1261,8 @@ MonoBehaviour:
   MaxYRot: -168
   MinZRot: 55
   MaxZRot: 110
-  MinXRot: 76
-  MaxXRot: 96
+  MinXRot: 70
+  MaxXRot: 100
   _LightAnimation: {fileID: 853348470}
   _CameraAnimation: {fileID: 291638091}
 --- !u!1 &1715555104

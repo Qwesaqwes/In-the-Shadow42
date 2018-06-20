@@ -20,12 +20,14 @@ public class GlobeEarthMovement : MonoBehaviour
 	bool				_baseOK = false;
 	bool				_PlayerWin = false;
 	bool				winAnimationCompleted = true;
+	AudioSource			_audio;
 	
 	// Use this for initialization
 	void Start ()
 	{
 		Earth.transform.eulerAngles = new Vector3(Random.Range(0, 360), Random.Range(0, 360), Random.Range(0, 360));
 		Base.transform.eulerAngles = new Vector3(Random.Range(0, 360), Random.Range(0, 360), Random.Range(0, 360));
+		_audio = gameObject.GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
@@ -94,6 +96,7 @@ public class GlobeEarthMovement : MonoBehaviour
 					Debug.Log("EarthOKK NORMAL");
 					EarthMaterial.SetColor("_RimColor", Color.white);
 					_earthOK = true;
+					_audio.Play();
 				}
 			}
 
@@ -105,6 +108,7 @@ public class GlobeEarthMovement : MonoBehaviour
 					Debug.Log("EarthOKKK REVERT");
 					EarthMaterial.SetColor("_RimColor", Color.white);
 					_earthOK = true;
+					_audio.Play();
 				}
 			}
 		}
@@ -128,6 +132,7 @@ public class GlobeEarthMovement : MonoBehaviour
 						Debug.Log("BASEOKKKKK");
 						BaseMaterial.SetColor("_RimColor", Color.white);
 						_baseOK = true;
+						_audio.Play();
 					}
 				}
 			}
@@ -148,6 +153,7 @@ public class GlobeEarthMovement : MonoBehaviour
 
 		if (offsetY <= 0.03 && offsetZ <= 0.03 && _PlayerWin == false)
 		{
+			FindObjectOfType<AudioManager>().Play("WinSound");
 			if (PlayerPrefs.GetInt("Mode") == 0)
 			{
 				PlayerPrefs.SetInt("Level4", 1);
@@ -161,8 +167,8 @@ public class GlobeEarthMovement : MonoBehaviour
 			CameraAnimation.SetTrigger("LevelClear");
 			StartCoroutine(ReactiveMouse());
 		}
-		else
-			_PlayerWin = false;
+		// else
+		// 	_PlayerWin = false;
 	}
 
 	IEnumerator	ReactiveMouse()

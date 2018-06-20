@@ -18,6 +18,9 @@ public class ModeSelection : MonoBehaviour
 		if (!PlayerPrefs.HasKey("LastLevelClear"))
 			PlayerPrefs.SetInt("LastLevelClear", 0);
 
+		FindObjectOfType<AudioManager>().Stop("MapSound");
+		FindObjectOfType<AudioManager>().Play("IntroSound");
+
 		//debug
 			
 		// PlayerPrefs.SetInt("Mode", 0);

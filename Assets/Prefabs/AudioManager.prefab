@@ -1,0 +1,84 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1109748034058338}
+  m_IsPrefabParent: 1
+--- !u!1 &1109748034058338
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4579818538210854}
+  - component: {fileID: 114060443319422624}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4579818538210854
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1109748034058338}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 3.785, z: -5.473}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114060443319422624
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1109748034058338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e72a71964e1e4ef0904f52bed6171aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: IntroSound
+    clip: {fileID: 8300000, guid: 66d994a3c0c1b4c0c93da980ab54ecbd, type: 3}
+    volume: 0.49
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: MapSound
+    clip: {fileID: 8300000, guid: 866c4bd0877be41488a08f63e186a894, type: 3}
+    volume: 0.49
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: SelectedLevel
+    clip: {fileID: 8300000, guid: bfa79570c8c93420abf5d6be7e44977f, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: SelectedMode
+    clip: {fileID: 8300000, guid: 4d66a25a86cd84ad2928a60b6817a19e, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: WinSound
+    clip: {fileID: 8300000, guid: 9b45343d66c874181b7eb94ab926310e, type: 3}
+    volume: 0.49
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}

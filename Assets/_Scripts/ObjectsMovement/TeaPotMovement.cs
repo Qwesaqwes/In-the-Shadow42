@@ -30,6 +30,7 @@ public class TeaPotMovement : MonoBehaviour
 	{
 		if ((transform.eulerAngles.y >= MinYRot && transform.eulerAngles.y <= MaxYRot) && _PlayerWin == false)
 		{
+			FindObjectOfType<AudioManager>().Play("WinSound");
 			// Debug.Log("YOU WIN!");
 			if (PlayerPrefs.GetInt("Mode") == 0)
 			{
@@ -44,8 +45,8 @@ public class TeaPotMovement : MonoBehaviour
 			_CameraAnimation.SetTrigger("LevelClear");
 			StartCoroutine(ReactiveMouse());
 		}
-		else
-			_PlayerWin = false;
+		// else
+		// 	_PlayerWin = false;
 	}
 
 	IEnumerator	ReactiveMouse()

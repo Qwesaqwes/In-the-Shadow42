@@ -21,6 +21,7 @@ public class AnswerToAllMovement : MonoBehaviour
 	bool				_Number2OK = false;
 	bool				_PlayerWin = false;
 	bool				winAnimationCompleted = true;
+	AudioSource			_audio;
 
 
 
@@ -29,6 +30,7 @@ public class AnswerToAllMovement : MonoBehaviour
 	{
 		Number4.transform.eulerAngles = new Vector3(Random.Range(0, 360), Random.Range(0, 360), Random.Range(0, 360));
 		Number2.transform.eulerAngles = new Vector3(Random.Range(0, 360), Random.Range(0, 360), Random.Range(0, 360));	
+		_audio = gameObject.GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
@@ -94,6 +96,7 @@ public class AnswerToAllMovement : MonoBehaviour
 					{
 						Number4Material.SetColor("_RimColor", Color.green);
 						_Number4OK = true;
+						_audio.Play();
 					}
 				}
 			}
@@ -107,20 +110,44 @@ public class AnswerToAllMovement : MonoBehaviour
 
 	void checkNumber2()
 	{
-		if ((Number2.transform.eulerAngles.y >= 85 && Number2.transform.eulerAngles.y <= 100) ||
-			(Number2.transform.eulerAngles.y >= 260 && Number2.transform.eulerAngles.y <= 280))
+		if ((Number2.transform.eulerAngles.x >= 350 && Number2.transform.eulerAngles.x <= 360) ||
+			Number2.transform.eulerAngles.x >= 0 && Number2.transform.eulerAngles.x <= 10)
 		{
-			if ((Number2.transform.eulerAngles.x >= 350 && Number2.transform.eulerAngles.x <= 360) ||
-				(Number2.transform.eulerAngles.x >= 0 && Number2.transform.eulerAngles.x <= 10) ||
-				Number2.transform.eulerAngles.x >= 170 && Number2.transform.eulerAngles.x <= 190)
+			if (Number2.transform.eulerAngles.y >= 80 && Number2.transform.eulerAngles.y <= 100)
 			{
-				if ((Number2.transform.eulerAngles.z >= 350 && Number2.transform.eulerAngles.z <= 360) ||
+				if ((Number2.transform.eulerAngles.z >= 350 && Number2.transform.eulerAngles.z <= 360)||
 					Number2.transform.eulerAngles.z >= 0 && Number2.transform.eulerAngles.z <= 10)
 				{
 					if (!_Number2OK)
 					{
 						Number2Material.SetColor("_RimColor", Color.green);
 						_Number2OK = true;
+						_audio.Play();
+					}
+				}
+				else if (Number2.transform.eulerAngles.z >= 170 && Number2.transform.eulerAngles.z <= 190)
+				{
+					if (!_Number2OK)
+					{
+						Number2Material.SetColor("_RimColor", Color.green);
+						_Number2OK = true;
+						_audio.Play();
+					}
+				}
+			}
+		}
+		else if (Number2.transform.eulerAngles.x >= 170 && Number2.transform.eulerAngles.x <= 190)
+		{
+			if (Number2.transform.eulerAngles.y >= 260 && Number2.transform.eulerAngles.y <= 280)
+			{
+				if ((Number2.transform.eulerAngles.z >= 350 && Number2.transform.eulerAngles.z <= 360)||
+					Number2.transform.eulerAngles.z >= 0 && Number2.transform.eulerAngles.z <= 10)
+				{
+					if (!_Number2OK)
+					{
+						Number2Material.SetColor("_RimColor", Color.green);
+						_Number2OK = true;
+						_audio.Play();
 					}
 				}
 			}
@@ -138,6 +165,7 @@ public class AnswerToAllMovement : MonoBehaviour
 		float offsetZ = (Number4.transform.position.z - Number2.transform.position.z);
 		if (offsetY <= 0.05 && offsetZ >= -0.2 && offsetZ <= -0.15 && _PlayerWin == false)
 		{
+			FindObjectOfType<AudioManager>().Play("WinSound");
 			if (PlayerPrefs.GetInt("Mode") == 0)
 			{
 				PlayerPrefs.SetInt("LastLevelClear", 1);
@@ -151,8 +179,8 @@ public class AnswerToAllMovement : MonoBehaviour
 			CameraAnimation.SetTrigger("LevelClear");
 			StartCoroutine(ReactiveMouse());
 		}
-		else
-			_PlayerWin = false;
+		// else
+		// 	_PlayerWin = false;
 	}
 
 	IEnumerator	ReactiveMouse()

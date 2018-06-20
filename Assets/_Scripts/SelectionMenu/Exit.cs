@@ -8,5 +8,15 @@ public class Exit : MonoBehaviour
 		{
 			Application.Quit();
 		}
-	}	
+	}
+
+	void OnMouseEnter()
+	{
+		transform.localScale += new Vector3(0.01f, 0.01f, 0.01f);
+	}
+
+	void OnMouseExit()
+	{
+		transform.localScale -= new Vector3(0.01f, 0.01f, 0.01f);
+	}
 }
