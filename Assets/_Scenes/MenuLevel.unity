@@ -4340,6 +4340,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2142091818}
   - component: {fileID: 2142091819}
+  - component: {fileID: 2142091820}
   m_Layer: 0
   m_Name: Levels
   m_TagString: Untagged
@@ -4383,3 +4384,20 @@ MonoBehaviour:
   Pathligh1Animation: {fileID: 2027807375}
   Pathligh2Animation: {fileID: 665899980}
   Pathligh3Animation: {fileID: 1082294620}
+--- !u!114 &2142091820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2142091817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8caa3027c82f24fa7b28d703964fe31d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  level2Obj: {fileID: 1900285890}
+  level2TextObj: {fileID: 429056137}
+  level3Obj: {fileID: 507469730}
+  level3TextObj: {fileID: 198611090}
+  level4Obj: {fileID: 1057666514}
+  level4TextObj: {fileID: 320439246}

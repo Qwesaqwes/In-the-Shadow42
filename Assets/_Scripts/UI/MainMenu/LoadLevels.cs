@@ -85,9 +85,9 @@ public class LoadLevels : MonoBehaviour
 		}
 		else
 		{
-			Pathligh1Animation.SetTrigger("LevelClear");
-			Pathligh2Animation.SetTrigger("LevelClear");
-			Pathligh3Animation.SetTrigger("LevelClear");
+			// Pathligh1Animation.SetTrigger("LevelClear");
+			// Pathligh2Animation.SetTrigger("LevelClear");
+			// Pathligh3Animation.SetTrigger("LevelClear");
 			Level1Material.SetColor("_EmissionColor", Color.yellow);
 			Level2Material.SetColor("_EmissionColor", Color.yellow);
 			Level3Material.SetColor("_EmissionColor", Color.yellow);

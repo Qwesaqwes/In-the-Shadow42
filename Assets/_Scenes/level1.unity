@@ -2153,6 +2153,36 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114853898918768158, guid: 15d56580ac70844228a32b0a0f8cd856,
+        type: 2}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114953889840883182, guid: 15d56580ac70844228a32b0a0f8cd856,
+        type: 2}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114853898918768158, guid: 15d56580ac70844228a32b0a0f8cd856,
+        type: 2}
+      propertyPath: m_Text
+      value: Move the Mouse Left/Right to Rotate Yaxis
+      objectReference: {fileID: 0}
+    - target: {fileID: 114853898918768158, guid: 15d56580ac70844228a32b0a0f8cd856,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114853898918768158, guid: 15d56580ac70844228a32b0a0f8cd856,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0.97794116
+      objectReference: {fileID: 0}
+    - target: {fileID: 114853898918768158, guid: 15d56580ac70844228a32b0a0f8cd856,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0.97794116
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 15d56580ac70844228a32b0a0f8cd856, type: 2}
   m_IsPrefabParent: 0
